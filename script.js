@@ -12,7 +12,11 @@ function questions () {
     while(count != 3) {
         let lastMovie = prompt("One of the las movie you had seen", "London field");
         let movieRate = prompt("Please, ate the movie", "10");
+        persolanMovieDB.movies[lastMovie] = movieRate;
+        persolanMovieDB.movies[lastMovie] = movieRate;
         count++;
     }
 }
 questions();
+
+console.log(persolanMovieDB);
