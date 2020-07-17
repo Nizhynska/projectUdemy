@@ -17,11 +17,11 @@ for(let i = 0; i < 2; i++) {
         }
     
 }
-if(numberOfFilms < 10) {
+if(persolanMovieDB.count < 10) {
     alert("you have seen lack of movies")
-} else if(numberOfFilms >= 10 && numberOfFilms <= 30) {
+} else if(persolanMovieDB.count >= 10 && persolanMovieDB.count <= 30) {
     alert("you are tipical viewer");
-} else if(numberOfFilms > 30) {
+} else if(persolanMovieDB.count > 30) {
     alert("you are huge fan");
 } else {
 alert("some error"); 
