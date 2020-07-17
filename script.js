@@ -1,4 +1,5 @@
-let numberOfFilms = prompt("how many movies hav you watched", "10");
+'use strict';
+let numberOfFilms = +prompt("how many movies hav you watched", "10");
 let persolanMovieDB = {
     count: numberOfFilms,
     movies: {},
@@ -6,17 +7,27 @@ let persolanMovieDB = {
     genres: [],
     private: false
 };
-
-function questions () {
-    count = 1;
-    while(count != 3) {
-        let lastMovie = prompt("One of the las movie you had seen", "London field");
-        let movieRate = prompt("Please, ate the movie", "10");
-        persolanMovieDB.movies[lastMovie] = movieRate;
-        persolanMovieDB.movies[lastMovie] = movieRate;
-        count++;
-    }
+for(let i = 0; i < 2; i++) {
+    const lastMovie = prompt("One of the las movie you had seen", "London field");
+    const movieRate = prompt("Please, ate the movie", "10");
+        if(lastMovie != null && movieRate != null && lastMovie != "" && movieRate != "" && lastMovie.length < 50) {
+            persolanMovieDB.movies[lastMovie] = movieRate;
+        } else {
+            i--;
+        }
+    
 }
-questions();
+if(numberOfFilms < 10) {
+    alert("you have seen lack of movies")
+} else if(numberOfFilms >= 10 && numberOfFilms <= 30) {
+    alert("you are tipical viewer");
+} else if(numberOfFilms > 30) {
+    alert("you are huge fan");
+} else {
+alert("some error"); 
+}
+
+
+
 
 console.log(persolanMovieDB);
