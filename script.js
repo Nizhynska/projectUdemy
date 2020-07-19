@@ -51,12 +51,10 @@ showMyDB();
 
 function writeYourGenres() {
     let count = 1;
-    let num = 0;
     for(let i = 0; i <= 2; i++) {
        let answer =  prompt(`Your favorite movie genres number ${count}`, ``);
-        persolanMovieDB.genres[num] = answer;
+        persolanMovieDB.genres[count-1] = answer;
         count++;
-        num++;
     }
 }
 
